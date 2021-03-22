@@ -68,8 +68,8 @@ void host_action(PGM_P const pstr, const bool eol) {
 
 #if ENABLED(HOST_PROMPT_SUPPORT)
 
-  PGMSTR(CONTINUE_STR, "Continue");
-  PGMSTR(DISMISS_STR, "Dismiss");
+  PGMSTR(CONTINUE_STR, "Reprendre");
+  PGMSTR(DISMISS_STR, "Annuler");
 
   #if HAS_RESUME_CONTINUE
     extern bool wait_for_user;
@@ -129,7 +129,7 @@ void host_action(PGM_P const pstr, const bool eol) {
 
   void filament_load_host_prompt() {
     const bool disable_to_continue = TERN0(HAS_FILAMENT_SENSOR, runout.filament_ran_out);
-    host_prompt_do(PROMPT_FILAMENT_RUNOUT, PSTR("Paused"), PSTR("PurgeMore"),
+    host_prompt_do(PROMPT_FILAMENT_RUNOUT, PSTR("En pause"), PSTR("Purger plus"),
       disable_to_continue ? PSTR("DisableRunout") : CONTINUE_STR
     );
   }
