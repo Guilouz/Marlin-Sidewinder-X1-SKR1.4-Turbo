@@ -114,10 +114,10 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_LASER_TOGGLE                    = _UxGT("Basculer Laser");
   PROGMEM Language_Str MSG_LASER_PULSE_MS                  = _UxGT("Test Pulse ms");
   PROGMEM Language_Str MSG_LASER_FIRE_PULSE                = _UxGT("Fire Pulse");
+  PROGMEM Language_Str MSG_FLOWMETER_FAULT                 = _UxGT("Erreur de débit du liquide de refroidissement");
   PROGMEM Language_Str MSG_SPINDLE_TOGGLE                  = _UxGT("Basculer Spindle");
   PROGMEM Language_Str MSG_SPINDLE_FORWARD                 = _UxGT("Spindle en avant");
   PROGMEM Language_Str MSG_SPINDLE_REVERSE                 = _UxGT("Inverser broches");
-
   PROGMEM Language_Str MSG_SWITCH_PS_ON                    = _UxGT("Allumer alim.");
   PROGMEM Language_Str MSG_SWITCH_PS_OFF                   = _UxGT("Eteindre alim.");
   PROGMEM Language_Str MSG_EXTRUDE                         = _UxGT("Extrusion");
@@ -138,7 +138,7 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_MESH_X                          = _UxGT("Index X");
   PROGMEM Language_Str MSG_MESH_Y                          = _UxGT("Index Y");
   PROGMEM Language_Str MSG_MESH_EDIT_Z                     = _UxGT("Valeur Z");
-  PROGMEM Language_Str MSG_USER_MENU                       = _UxGT("Commandes perso");
+  PROGMEM Language_Str MSG_CUSTOM_COMMANDS                 = _UxGT("Commandes perso");
   PROGMEM Language_Str MSG_M48_TEST                        = _UxGT("Test sonde M48");
   PROGMEM Language_Str MSG_M48_POINT                       = _UxGT("Point M48");
   PROGMEM Language_Str MSG_M48_OUT_OF_BOUNDS               = _UxGT("Sonde hors limites");
@@ -276,6 +276,7 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_CHAMBER                         = _UxGT("Caisson");
   PROGMEM Language_Str MSG_COOLER                          = _UxGT("Refroidisseur lasert");
   PROGMEM Language_Str MSG_COOLER_TOGGLE                   = _UxGT("Permutter refroidisseur");
+  PROGMEM Language_Str MSG_FLOWMETER_SAFETY                = _UxGT("Sécurité du débit");
   PROGMEM Language_Str MSG_LASER                           = _UxGT("Laser");
   PROGMEM Language_Str MSG_FAN_SPEED                       = _UxGT("Vitesse du ventilateur");
   PROGMEM Language_Str MSG_FAN_SPEED_N                     = _UxGT("Vitesse du ventilateur ~");
@@ -365,7 +366,7 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_ERR_EEPROM_CRC                  = _UxGT("Erreur CRC EEPROM");
   PROGMEM Language_Str MSG_ERR_EEPROM_INDEX                = _UxGT("Erreur Index EEPROM");
   PROGMEM Language_Str MSG_ERR_EEPROM_VERSION              = _UxGT("Erreur Version EEPROM");
-  PROGMEM Language_Str MSG_SETTINGS_STORED                 = _UxGT("Config. enregistrée");
+  PROGMEM Language_Str MSG_SETTINGS_STORED                 = _UxGT("Configuration enregistrée");
   PROGMEM Language_Str MSG_MEDIA_UPDATE                    = _UxGT("MaJ Firmware SD");
   PROGMEM Language_Str MSG_RESET_PRINTER                   = _UxGT("RaZ imprimante");
   PROGMEM Language_Str MSG_REFRESH                         = LCD_STR_REFRESH _UxGT("Actualiser");
@@ -519,7 +520,8 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_LINEAR_LEVELING                 = _UxGT("Niveau linéaire");
   PROGMEM Language_Str MSG_BILINEAR_LEVELING               = _UxGT("Niveau bilinéaire");
   PROGMEM Language_Str MSG_UBL_LEVELING                    = _UxGT("Niveau plateau unifié");
-  PROGMEM Language_Str MSG_MESH_LEVELING                   = _UxGT("Niveau par grille");
+  PROGMEM Language_Str MSG_MESH_LEVELING                   = _UxGT("Nivellement Mesh");
+  PROGMEM Language_Str MSG_MESH_DONE                       = _UxGT("Sondage Mesh terminé");
   PROGMEM Language_Str MSG_INFO_STATS_MENU                 = _UxGT("Stats. imprimante");
   PROGMEM Language_Str MSG_INFO_BOARD_MENU                 = _UxGT("Infos carte");
   PROGMEM Language_Str MSG_INFO_THERMISTOR_MENU            = _UxGT("Thermistances");
