@@ -12,7 +12,7 @@ Firmware Marlin 2.0.x bugfix configuré pour Artillery Sidewinder X1 avec carte 
 
 Firmware pour écran BigTreeTech TFT43 3.0 disponible [ici](https://github.com/Guilouz/BTT-TFT43-Sidewinder-X1).
 
-## Principales focntionnalités configurées :
+## Principales fonctionnalités configurées :
 
 - Support carte mère BigTreeTech SKR 1.4 Turbo
 - Support drivers TMC2209/TMC2226
