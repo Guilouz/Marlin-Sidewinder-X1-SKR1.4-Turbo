@@ -79,7 +79,10 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_LEVEL_BED_NEXT_POINT            = _UxGT("Point suivant");
   PROGMEM Language_Str MSG_LEVEL_BED_DONE                  = _UxGT("Mise à niveau OK!");
   PROGMEM Language_Str MSG_Z_FADE_HEIGHT                   = _UxGT("Hauteur lissée");
-  PROGMEM Language_Str MSG_SET_HOME_OFFSETS                = _UxGT("Régl. décal origine");
+  PROGMEM Language_Str MSG_SET_HOME_OFFSETS                = _UxGT("Définir Home Offsets");
+  PROGMEM Language_Str MSG_HOME_OFFSET_X                   = _UxGT("Home Offset X");
+  PROGMEM Language_Str MSG_HOME_OFFSET_Y                   = _UxGT("Home Offset Y");
+  PROGMEM Language_Str MSG_HOME_OFFSET_Z                   = _UxGT("Home Offset Z");
   PROGMEM Language_Str MSG_HOME_OFFSETS_APPLIED            = _UxGT("Décalages appliqués");
   PROGMEM Language_Str MSG_SET_ORIGIN                      = _UxGT("Régler origine");
   PROGMEM Language_Str MSG_ASSISTED_TRAMMING               = _UxGT("Tramage assisté");
@@ -112,10 +115,12 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_LASER_POWER                     = _UxGT("Puissance");
   PROGMEM Language_Str MSG_SPINDLE_POWER                   = _UxGT("Spindle Pwr");
   PROGMEM Language_Str MSG_LASER_TOGGLE                    = _UxGT("Basculer Laser");
+  PROGMEM Language_Str MSG_LASER_EVAC_TOGGLE               = _UxGT("Basculer Ventilateur");
   PROGMEM Language_Str MSG_LASER_PULSE_MS                  = _UxGT("Test Pulse ms");
   PROGMEM Language_Str MSG_LASER_FIRE_PULSE                = _UxGT("Fire Pulse");
   PROGMEM Language_Str MSG_FLOWMETER_FAULT                 = _UxGT("Erreur de débit du liquide de refroidissement");
   PROGMEM Language_Str MSG_SPINDLE_TOGGLE                  = _UxGT("Basculer Spindle");
+  PROGMEM Language_Str MSG_SPINDLE_EVAC_TOGGLE             = _UxGT("Basculer Aspiration");
   PROGMEM Language_Str MSG_SPINDLE_FORWARD                 = _UxGT("Spindle en avant");
   PROGMEM Language_Str MSG_SPINDLE_REVERSE                 = _UxGT("Inverser broches");
   PROGMEM Language_Str MSG_SWITCH_PS_ON                    = _UxGT("Allumer alim.");
@@ -699,4 +704,6 @@ namespace Language_fr {
   PROGMEM Language_Str MSG_BOTTOM_RIGHT                    = _UxGT("Coin bas droit");
   PROGMEM Language_Str MSG_CALIBRATION_COMPLETED           = _UxGT("Calibration terminée");
   PROGMEM Language_Str MSG_CALIBRATION_FAILED              = _UxGT("Échec de l'étalonnage");
+  
+  PROGMEM Language_Str MSG_DRIVER_BACKWARD                 = _UxGT(" driver inversé");
 }
