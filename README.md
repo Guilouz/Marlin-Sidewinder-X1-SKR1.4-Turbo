@@ -16,7 +16,7 @@ Le firmware pour écran BigTreeTech TFT43 3.0 est disponible [ici](https://githu
 
 - Support carte mère BigTreeTech SKR 1.4 Turbo
 - Support drivers TMC2209/TMC2226
-- Support écran BigTreeTech TFT43 3.0
+- Support écrans BigTreeTech
 - Support BLTouch (High Speed Mode) & Bed Leveling Bilinear
 - Support M600 & Nozzle Park / Advanced Pause
 - Support Neopixels
