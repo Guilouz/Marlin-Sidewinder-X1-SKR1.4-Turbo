@@ -163,7 +163,7 @@
 
   //#define CHAMBER_FAN               // Enable a fan on the chamber
   #if ENABLED(CHAMBER_FAN)
-    #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve.
+    #define CHAMBER_FAN_MODE 2        // Fan control mode: 0=Static; 1=Linear increase when temp is higher than target; 2=V-shaped curve; 3=similar to 1 but fan is always on.
     #if CHAMBER_FAN_MODE == 0
       #define CHAMBER_FAN_BASE  255   // Chamber fan PWM (0-255)
     #elif CHAMBER_FAN_MODE == 1
@@ -1486,8 +1486,8 @@
   #if ENABLED(MULTI_VOLUME)
     #define VOLUME_SD_ONBOARD
     #define VOLUME_USB_FLASH_DRIVE
-    #define DEFAULT_VOLUME SD_ONBOARD
-    #define DEFAULT_SHARED_VOLUME USB_FLASH_DRIVE
+    #define DEFAULT_VOLUME SV_SD_ONBOARD
+    #define DEFAULT_SHARED_VOLUME SV_USB_FLASH_DRIVE
   #endif
 
 #endif // SDSUPPORT
@@ -2301,14 +2301,15 @@
 #endif // HAS_MULTI_EXTRUDER
 
 /**
- * Advanced Pause
- * Experimental feature for filament change support and for parking the nozzle when paused.
- * Adds the GCode M600 for initiating filament change.
- * If PARK_HEAD_ON_PAUSE enabled, adds the GCode M125 to pause printing and park the nozzle.
+ * Advanced Pause for Filament Change
+ *  - Adds the G-code M600 Filament Change to initiate a filament change.
+ *  - This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
  *
- * Requires an LCD display.
- * Requires NOZZLE_PARK_FEATURE.
- * This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
+ * Requirements:
+ *  - For Filament Change parking enable and configure NOZZLE_PARK_FEATURE.
+ *  - For user interaction enable an LCD display, HOST_PROMPT_SUPPORT, or EMERGENCY_PARSER.
+ *
+ * Enable PARK_HEAD_ON_PAUSE to add the G-code M125 Pause and Park.
  */
 #define ADVANCED_PAUSE_FEATURE
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
@@ -2838,7 +2839,7 @@
    * Beta feature!
    * Create a 50/50 square wave step pulse optimal for stepper drivers.
    */
-  //#define SQUARE_WAVE_STEPPING
+  #define SQUARE_WAVE_STEPPING
 
   /**
    * Enable M122 debugging command for TMC stepper drivers.
@@ -3166,13 +3167,19 @@
   //#define AIR_EVACUATION                     // Cutter Vacuum / Laser Blower motor control with G-codes M10-M11
   #if ENABLED(AIR_EVACUATION)
     #define AIR_EVACUATION_ACTIVE       LOW    // Set to "HIGH" if the on/off function is active HIGH
-    #define AIR_EVACUATION_PIN          42     // Override the default Cutter Vacuum or Laser Blower pin
+    //#define AIR_EVACUATION_PIN        42     // Override the default Cutter Vacuum or Laser Blower pin
   #endif
 
-  //#define SPINDLE_SERVO         // A servo converting an angle to spindle power
+  //#define AIR_ASSIST                         // Air Assist control with G-codes M8-M9
+  #if ENABLED(AIR_ASSIST)
+    #define AIR_ASSIST_ACTIVE           LOW    // Active state on air assist pin
+    //#define AIR_ASSIST_PIN            44     // Override the default Air Assist pin
+  #endif
+
+  //#define SPINDLE_SERVO                      // A servo converting an angle to spindle power
   #ifdef SPINDLE_SERVO
-    #define SPINDLE_SERVO_NR   0  // Index of servo used for spindle control
-    #define SPINDLE_SERVO_MIN 10  // Minimum angle for servo spindle
+    #define SPINDLE_SERVO_NR   0               // Index of servo used for spindle control
+    #define SPINDLE_SERVO_MIN 10               // Minimum angle for servo spindle
   #endif
 
   /**
@@ -3478,7 +3485,7 @@
 #define PROPORTIONAL_FONT_RATIO 1.0
 
 /**
- * Spend 28 bytes of SRAM to optimize the GCode parser
+ * Spend 28 bytes of SRAM to optimize the G-code parser
  */
 #define FASTER_GCODE_PARSER
 
@@ -3772,6 +3779,16 @@
   //#define GANTRY_CALIBRATION_XY_PARK_FEEDRATE 3000  // XY Park Feedrate - MMM
   //#define GANTRY_CALIBRATION_COMMANDS_PRE   ""
   #define GANTRY_CALIBRATION_COMMANDS_POST  "G28"     // G28 highly recommended to ensure an accurate position
+#endif
+
+/**
+ * Instant freeze / unfreeze functionality
+ * Specified pin has pullup and connecting to ground will instantly pause motion.
+ * Potentially useful for emergency stop that allows being resumed.
+ */
+//#define FREEZE_FEATURE
+#if ENABLED(FREEZE_FEATURE)
+  //#define FREEZE_PIN 41   // Override the default (KILL) pin here
 #endif
 
 /**

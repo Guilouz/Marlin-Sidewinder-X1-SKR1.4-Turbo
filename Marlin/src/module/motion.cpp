@@ -102,7 +102,7 @@ xyze_pos_t destination; // {0}
 // G60/G61 Position Save and Return
 #if SAVED_POSITIONS
   uint8_t saved_slots[(SAVED_POSITIONS + 7) >> 3];
-  xyz_pos_t stored_position[SAVED_POSITIONS];
+  xyze_pos_t stored_position[SAVED_POSITIONS];
 #endif
 
 // The active extruder (tool). Set with T<extruder> command.
@@ -426,7 +426,7 @@ void _internal_move_to_destination(const_feedRate_t fr_mm_s/*=0.0f*/
   #endif
 
   if (TERN0(IS_KINEMATIC, is_fast))
-    TERN(IS_KINEMATIC, NOOP, prepare_line_to_destination());
+    TERN(IS_KINEMATIC, prepare_fast_move_to_destination(), NOOP);
   else
     prepare_line_to_destination();
 
