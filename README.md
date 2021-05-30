@@ -27,6 +27,7 @@ Le firmware pour carte mère BigTreeTech SKR 2.0 est disponible [ici](https://gi
 - Support S-Curve Acceleration & Junction Deviation
 - Support G34 - Z Steppers Auto-Alignment
 - Support G26 - Mesh Validation Pattern
+- Support BINARY_FILE_TRANSFER (transfert du fichier firmware à distance)
 - Optimisation du buffer pour Octoprint
 - Marlin en français
 
