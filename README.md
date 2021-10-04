@@ -27,7 +27,6 @@ Le firmware pour carte mère BigTreeTech SKR 2.0 est disponible [ici](https://gi
 - Support G34 - Z Steppers Auto-Alignment
 - Support G26 - Mesh Validation Pattern
 - Support du transfert de fichier binaire (transfert du fichier firmware à distance via Octoprint)
-- Support de l'extinction de la chauffe après 15 minutes d'inactivité de la hotend
 - Activation du ventilateur de la hotend uniquement quand la chauffe dépasse 50°C
 - Support des commandes d'action de l'hôte
 - Optimisation du buffer pour Octoprint
