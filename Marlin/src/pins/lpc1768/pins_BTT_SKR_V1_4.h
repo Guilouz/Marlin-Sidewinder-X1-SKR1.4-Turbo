@@ -35,7 +35,7 @@
   #define BOARD_CUSTOM_BUILD_FLAGS -DLPC_PINCFG_UART3_P4_28
 #endif
 
-#define USES_DIAG_PINS
+//#define USES_DIAG_PINS
 
 //
 // EEPROM
@@ -46,9 +46,9 @@
 #endif
 
 #if ENABLED(I2C_EEPROM)
-  #define MARLIN_EEPROM_SIZE              0x8000  // 32Kb
+  #define MARLIN_EEPROM_SIZE              0x8000  // 32K
 #elif ENABLED(SDCARD_EEPROM_EMULATION)
-  #define MARLIN_EEPROM_SIZE               0x800  // 2Kb
+  #define MARLIN_EEPROM_SIZE               0x800  // 2K
 #endif
 
 //
