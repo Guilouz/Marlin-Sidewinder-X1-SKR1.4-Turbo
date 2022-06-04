@@ -20,6 +20,7 @@ Le firmware pour carte mère BigTreeTech SKR 2.0 est disponible [ici](https://gi
 - Support drivers TMC2209/TMC2226
 - Support écrans BigTreeTech
 - Support Bed Leveling Bilinear 5 x 5 points
+- Support Bilinear Subdivision
 - Support BLTouch (High Speed Mode)
 - Support M600 & Nozzle Park / Advanced Pause
 - Support Babystepping
@@ -28,6 +29,7 @@ Le firmware pour carte mère BigTreeTech SKR 2.0 est disponible [ici](https://gi
 - Support PID Buse & Plateau
 - Support protection thermique contre l'emballement
 - Support S-Curve Acceleration & Junction Deviation
+- Support Firmware Auto Retract
 - Support G34 - Z Steppers Auto-Alignment
 - Support G26 - Mesh Validation Pattern
 - Support du transfert de fichier binaire (transfert du fichier firmware à distance via Octoprint)
